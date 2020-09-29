@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
 from PyQt5 import QtCore, QtGui, uic
@@ -6,13 +5,13 @@ from PyQt5.QtWidgets import QApplication
 import cv2
 import numpy as np
 import image_process as mcv2
-# definir número total de imagenes a mostrar
-MAX_IMG=6
+# definir numero total de imagenes a mostrar
+MAX_IMG=4
 
 class Webcam:
     def __init__(self):
         # Cargamos la GUI desde el archivo UI.
-        self.MAX_img=6
+        self.MAX_img= MAX_IMG
         self.cv_video=[]
         self.MainWindow = uic.loadUi('webcam.ui')
         self.MainWindow.setWindowTitle("Shape Detection")
@@ -40,6 +39,7 @@ class Webcam:
 
     def change_canny_inf(self):
         self.MainWindow.canny_inf.setValue(self.MainWindow.canny_inf_dial.value())
+
     def change_canny_sup(self):
         self.MainWindow.canny_sup.display(self.MainWindow.canny_sup_slide.value())
 
