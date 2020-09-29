@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>755</width>
+    <height>685</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="video">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>351</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>351</width>
+      <height>251</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="video1">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>40</y>
+      <width>351</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>371</width>
+      <height>261</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="video2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>351</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>351</width>
+      <height>271</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="video3">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>300</y>
+      <width>351</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>351</width>
+      <height>271</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="canny_sup_slide">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>580</y>
+      <width>160</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="canny_inf">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>580</y>
+      <width>48</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="canny_sup">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>600</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="canny_inf_dial">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>570</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

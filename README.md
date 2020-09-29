@@ -1,1 +1,0 @@
-Real time shape detection with python (Opencv)
