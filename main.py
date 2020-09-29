@@ -8,13 +8,16 @@ CS_W = 2    # Contour success drawing width
 PINK = (255, 0, 255)
 YELLOW = (0, 255, 255)
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 while True:
     ret, frame = cap.read()
 
-    # Gauss Filter (Blur)
-    gauss = cv2.GaussianBlur(frame, (5, 5), 1)
+    # Gray
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Gaussian Filter (Blur)
+    gauss = cv2.GaussianBlur(gray, (5, 5), 1)
 
     # Canny
     canny = cv2.Canny(gauss, 100, 200)
