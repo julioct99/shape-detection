@@ -10,7 +10,7 @@ PINK = (255, 0, 255)
 YELLOW = (0, 255, 255)
 
 def find_contorno(img,sal):
-    salida=sal.copy()
+    salida = sal.copy()
 
     # Find contours
     _, hierarchy = cv2.threshold(img, 240, 255, cv2.THRESH_BINARY)
@@ -45,13 +45,13 @@ def find_contorno(img,sal):
                     cv2.putText(salida, 'RECTANGLE', (x, y), cv2.FONT_HERSHEY_COMPLEX, F_S, YELLOW)
                     cv2.drawContours(salida, [approx], -1, YELLOW, CS_W)  
             # If PENTAGON
-            # elif len(approx) == 5:
-            #     cv2.putText(frame, 'PENTAGON', (x, y), cv2.FONT_HERSHEY_COMPLEX, 1, YELLOW)
-            #     cv2.drawContours(frame, [approx], -1, YELLOW, CS_W)
+            elif len(approx) == 5:
+                cv2.putText(salida, 'PENTAGON', (x, y), cv2.FONT_HERSHEY_COMPLEX, F_S, YELLOW)
+                cv2.drawContours(salida, [approx], -1, YELLOW, CS_W)
             # If HEXAGON
-            # elif len(approx) == 6:
-            #     cv2.putText(frame, 'HEXAGON', (x, y), cv2.FONT_HERSHEY_COMPLEX, 1, YELLOW)
-            #     cv2.drawContours(frame, [approx], -1, YELLOW, CS_W)
+            elif len(approx) == 6:
+                cv2.putText(salida, 'HEXAGON', (x, y), cv2.FONT_HERSHEY_COMPLEX, F_S, YELLOW)
+                cv2.drawContours(salida, [approx], -1, YELLOW, CS_W)
             # If CIRCLE
             elif len(approx) > 10:
                 cv2.putText(salida, 'CIRCLE', (x, y), cv2.FONT_HERSHEY_COMPLEX, F_S, YELLOW)
