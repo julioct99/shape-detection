@@ -24,9 +24,11 @@ class Webcam:
             self.cv_video.append(blue_image)
 
         self.MainWindow.canny_sup_slide.setRange(0,150)
+        self.MainWindow.gauss_sigma_slide.setRange(0, 25)
         self.MainWindow.canny_inf_dial.setMaximum(150)
         self.MainWindow.canny_inf.setRange(0,150)
         self.MainWindow.canny_sup_slide.valueChanged.connect(self.change_canny_sup)
+        self.MainWindow.gauss_sigma_slide.valueChanged.connect(self.change_sigma_value)
         self.MainWindow.canny_inf_dial.valueChanged.connect(self.change_canny_inf)
 
         self.timer_filter = QtCore.QTimer(self.MainWindow);
@@ -43,12 +45,16 @@ class Webcam:
     def change_canny_sup(self):
         self.MainWindow.canny_sup.display(self.MainWindow.canny_sup_slide.value())
 
+    def change_sigma_value(self):
+        self.MainWindow.gauss_sigma_value.display(self.MainWindow.gauss_sigma_slide.value())
+
+
     def make_filter(self):
         font = cv2.FONT_HERSHEY_SIMPLEX
         ok,entrada = self.webcam.read()
         self.height, self.width = entrada.shape[:2]
         self.cv_video[0] = entrada.copy()
-        self.cv_video[1] = cv2.GaussianBlur(entrada, (5,5),0)
+        self.cv_video[1] = cv2.GaussianBlur(entrada, (5,5), self.MainWindow.gauss_sigma_slide.value())
         self.cv_video[2] = cv2.cvtColor(entrada, cv2.COLOR_BGR2GRAY)
         self.cv_video[2] = cv2.Canny(self.cv_video[1], self.MainWindow.canny_inf.value(), self.MainWindow.canny_sup.value())
         self.cv_video[3] = mcv2.find_contorno(self.cv_video[2],entrada)

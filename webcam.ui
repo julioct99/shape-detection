@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>755</width>
-    <height>685</height>
+    <height>735</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,11 +58,34 @@
      <string>TextLabel</string>
     </property>
    </widget>
+   <widget class="QSlider" name="gauss_sigma_slide">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>300</y>
+      <width>160</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="gauss_sigma_value">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>335</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLabel" name="video2">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>300</y>
+      <y>370</y>
       <width>351</width>
       <height>271</height>
      </rect>
@@ -84,7 +107,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>300</y>
+      <y>370</y>
       <width>351</width>
       <height>271</height>
      </rect>
@@ -106,7 +129,7 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>580</y>
+      <y>650</y>
       <width>160</width>
       <height>29</height>
      </rect>
@@ -119,7 +142,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>580</y>
+      <y>650</y>
       <width>48</width>
       <height>27</height>
      </rect>
@@ -129,7 +152,7 @@
     <property name="geometry">
      <rect>
       <x>660</x>
-      <y>600</y>
+      <y>685</y>
       <width>64</width>
       <height>23</height>
      </rect>
@@ -139,7 +162,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>570</y>
+      <y>640</y>
       <width>51</width>
       <height>41</height>
      </rect>
