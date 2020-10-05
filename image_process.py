@@ -1,3 +1,5 @@
+# AUTOR: Julio Casallo Tamayo
+
 import cv2
 import numpy as np
 

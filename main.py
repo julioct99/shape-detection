@@ -1,3 +1,5 @@
+# AUTOR: Julio Casallo Tamayo
+
 # -*- coding: utf-8 -*-
 import sys
 from PyQt5 import QtCore, QtGui, uic
@@ -55,7 +57,7 @@ class Webcam:
         self.height, self.width = entrada.shape[:2]
         self.cv_video[0] = entrada.copy()
         self.cv_video[1] = cv2.GaussianBlur(entrada, (5,5), self.MainWindow.gauss_sigma_slide.value())
-        self.cv_video[2] = cv2.cvtColor(entrada, cv2.COLOR_BGR2GRAY)
+        self.cv_video[1] = cv2.cvtColor(self.cv_video[1], cv2.COLOR_BGR2GRAY)
         self.cv_video[2] = cv2.Canny(self.cv_video[1], self.MainWindow.canny_inf.value(), self.MainWindow.canny_sup.value())
         self.cv_video[3] = mcv2.find_contorno(self.cv_video[2],entrada)
 
